@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Recipe Search</title>
+    <title>Recipe Search App</title>
 </head>
 <body>
-    <form class="form">
-        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name">
-        <input type="text" name="lname" id="lname" placeholder="Enter Your last Name">
-        <input type="email" name="email" id="email" placeholder="Enter Your Email">
-        <input type="password" name="password" id="password" placeholder="Enter Your Password">
-        <input type="password" name="confpass" id="confpass" placeholder="Enter Password Again">
-        <button type="submit">Submit</button>
-    </form>
     <div class="container">
-        <h1>Recipe Search</h1>
-        
-        <div class="input-container">
-            <input type="text" id="dishNameInput" placeholder="Search by dish name (e.g., chicken curry)">
-            <button onclick="searchByDishName()">Search</button>
+        <h1>Recipe Search App</h1>
+        <div id="authContainer">
+            <div id="loginContainer">
+                <h2>Login</h2>
+                <div class="input-container">
+                    <input type="text" id="loginEmail" placeholder="Email">
+                    <input type="password" id="loginPassword" placeholder="Password">
+                </div>
+                <button onclick="login()">Login</button>
+            </div>
+            <div id="signupContainer">
+                <h2>Sign Up</h2>
+                <div class="input-container">
+                    <input type="text" id="signupName" placeholder="Name">
+                    <input type="text" id="signupEmail" placeholder="Email">
+                    <input type="password" id="signupPassword" placeholder="Password">
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm Password">
+                </div>
+                <button onclick="signup()">Sign Up</button>
+            </div>
         </div>
-        
-        <div class="input-container">
-            <input type="text" id="ingredientInput" placeholder="Search by main ingredient (e.g., chicken)">
-            <button onclick="searchByIngredient()">Search</button>
+
+        <div id="recipeContainer" style="display: none;">
+            <div class="input-container">
+                <input type="text" id="dishNameInput" placeholder="Search by dish name (e.g., chicken curry)">
+                <button onclick="searchByDishName()">Search</button>
+            </div>
+            <div class="input-container">
+                <input type="text" id="ingredientInput" placeholder="Search by main ingredient (e.g., chicken)">
+                <button onclick="searchByIngredient()">Search</button>
+            </div>
+            <button onclick="viewFavoriteDishes()">View Favorite Dishes</button>
+            <button onclick="logout()">Logout</button>
+            <div id="resultContainer"></div>
         </div>
-        
-        <button onclick="viewFavoriteDishes()">View Favorite Dishes</button>
-        
-        <div id="resultContainer"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

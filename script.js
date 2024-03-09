@@ -182,3 +182,53 @@ function getIngredients(meal) {
     }
     return ingredients.slice(0, -2); 
 }
+
+
+function login() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const localuser = JSON.parse(localStorage.getItem('user'))
+
+    if (email == localuser.email && password == localuser.password) {
+        document.getElementById('authContainer').style.display = 'none';
+        document.getElementById('recipeContainer').style.display = 'block';
+    } else {
+        alert('Invalid credentials');
+    }
+}
+
+function signup() {
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+    }
+
+    const user = { name, email, password };
+    localStorage.setItem('user', JSON.stringify(user));
+
+    alert('Signup successful! Please login.');
+}
+
+function logout() {
+    document.getElementById('authContainer').style.display = 'flex';
+    document.getElementById('recipeContainer').style.display = 'none';
+    resetFormInputs();
+}
+
+function checkLoggedIn() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+        document.getElementById('authContainer').style.display = 'none';
+        document.getElementById('recipeContainer').style.display = 'block';
+    } else {
+        document.getElementById('authContainer').style.display = 'flex';
+        document.getElementById('recipeContainer').style.display = 'none';
+    }
+}
+
+checkLoggedIn();
