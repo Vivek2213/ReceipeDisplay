@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipe Search</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Search</h1>
+        
+        <div class="input-container">
+            <input type="text" id="dishNameInput" placeholder="Search by dish name (e.g., chicken curry)">
+            <button onclick="searchByDishName()">Search</button>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="ingredientInput" placeholder="Search by main ingredient (e.g., chicken)">
+            <button onclick="searchByIngredient()">Search</button>
+        </div>
+        
+        <button onclick="viewFavoriteDishes()">View Favorite Dishes</button>
+        
+        <div id="resultContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

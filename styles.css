@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Recipe Result Styling */
+.recipe-result {
+    text-align: left;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.recipe-result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.recipe-result h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.recipe-result p {
+    margin-bottom: 8px;
+}
+
+/* dish result styling */
+
+.dish-result {
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.dish-result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dish-result h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dish-result p {
+    margin-bottom: 8px;
+}
+
+/* Global Styling */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* like button style*/
+.recipe-result button,
+.dish-result button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.recipe-result button:hover,
+.dish-result button:hover {
+    background-color: #2980b9;
+}
